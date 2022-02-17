@@ -1,7 +1,7 @@
+//ToDo : Write header for this
 
 #include "IntentRecognizer.h"
 
-#include <algorithm>
 #include <fstream>
 #include <iostream>
 
@@ -15,8 +15,9 @@ IntentRecognizer::IntentRecognizer()
 	fillKeywordColl(IntentType::FACTS);
 }
 
-void IntentRecognizer::processInput(const string& input)
+void IntentRecognizer::processInput(string& input)
 {
+	convertToLowerCase(input);
 	// Check if input is asking for a weather
 	for(const auto& keyword : m_weather_keywords)
 	{
@@ -58,10 +59,11 @@ void IntentRecognizer::processInput(const string& input)
 	}
 }
 
-void IntentRecognizer::processInput(const vector<string>& input)
+void IntentRecognizer::processInput(vector<string>& input)
 {
-	for(const auto& input_str : input)
+	for(auto& input_str : input)
 	{
+		convertToLowerCase(input_str);
 		// Check if input is asking for a weather
 		for(const auto& keyword : m_weather_keywords)
 		{
@@ -147,10 +149,17 @@ void IntentRecognizer::fillKeywordColl(const IntentType& intType)
 		{
 			if(!line.empty())
 			{
-				transform(line.begin(),line.end(),line.begin(),[](unsigned char ch){return tolower(ch);});
+				convertToLowerCase(line);
 				collPtr->push_back(line);
 			}
 		}
 		fin.close();
 	}
+}
+
+string IntentRecognizer::returnIntent(const string& input)
+{
+	auto in_out_pair = input_output_map.find(input);
+	
+	return in_out_pair->second;
 }

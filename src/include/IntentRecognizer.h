@@ -7,6 +7,7 @@
 #define CITIES_NAME_FILE "../config/cities.txt"
 #define FACT_RELATED_WORDS_FILE "../config/fact_related_words.txt"
 
+#include <algorithm>
 #include <string>
 #include <unordered_map>
 #include <vector>
@@ -27,12 +28,17 @@ class IntentRecognizer
 	IntentRecognizer(const IntentRecognizer&) = default;
 	IntentRecognizer& operator=(const IntentRecognizer&) = default;
 	
-	void processInput(const string& input);
-	void processInput(const vector<string>& input);
+	void processInput(string& input);
+	void processInput(vector<string>& input);
 	void printOutput();
+	string returnIntent(const string&);
 	
 	private:
 	void fillKeywordColl( const IntentType&);
+	void convertToLowerCase(string& input)
+	{
+		transform(input.begin(),input.end(),input.begin(),[](unsigned char ch){return tolower(ch);});
+	}
 
 	vector<string> m_weather_keywords;
 	vector<string> m_cities;

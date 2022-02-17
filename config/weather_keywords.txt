@@ -4,6 +4,7 @@ forecast
 cloudy
 cloud cover
 windy
+scorching
 wind speed
 humidity
 snowing

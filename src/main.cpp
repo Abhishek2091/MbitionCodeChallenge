@@ -26,11 +26,6 @@ void printReleaseVersion()
 	cout << "Version: 1.0.0" << endl;
 }
 
-void convertToLowerCase(string& input)
-{
-	transform(input.begin(),input.end(),input.begin(),[](unsigned char ch){return tolower(ch);});
-}
-
 void readInputFromCmdLine(shared_ptr<IntentRecognizer>& intentRecog)
 {
 	// Currenttly this functions reads from single user
@@ -46,7 +41,6 @@ void readInputFromCmdLine(shared_ptr<IntentRecognizer>& intentRecog)
 		getline(cin, input);
 		if(!input.empty())
 		{
-			convertToLowerCase(input);
 			intentRecog->processInput(input);
 		}
 		else
@@ -72,7 +66,6 @@ bool readInputFromFile(const string& fileName,shared_ptr<IntentRecognizer>& inte
 		{
 			if(!line.empty())
 			{
-				convertToLowerCase(line);
 				input.push_back(line);
 			}
 		}
@@ -94,7 +87,7 @@ bool parseInput(const string& input_type_param,shared_ptr<IntentRecognizer>& int
 	if( int pos = input_type_param.find("="); pos != string::npos )
 	{
 		string input_type = input_type_param.substr(pos+1);
-		convertToLowerCase(input_type);
+		transform(input_type.begin(),input_type.end(),input_type.begin(),[](unsigned char ch){return tolower(ch);});
 		if(input_type == "cmd_line")
 		{
 			cout << "You have choosen to enter input from command line." << endl << endl;
