@@ -1,0 +1,17 @@
+facts
+fact
+true
+false
+funny
+interesting
+mind blowing
+mind boggling
+mind bending
+historical
+history
+scary
+unknown
+scary
+random
+amazing
+weird

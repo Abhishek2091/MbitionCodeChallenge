@@ -1,0 +1,64 @@
+weather
+temperature
+forecast
+cloudy
+cloud cover
+windy
+wind speed
+humidity
+snowing
+snowy
+chilly
+cold
+thunderstorm
+thundershower
+precipitation
+cloudburst
+deluge
+downfall
+downpour
+rain
+raining
+pouring
+rainfall
+rainstorm
+storm
+wet
+sunny
+wet
+hot
+humid
+rainy
+warm
+cool
+snow showers
+snow
+fog
+blizzard
+cold wave
+breezy
+cyclone
+dew
+mist
+haze
+hazy
+smog
+hail
+hailstorm
+frost
+drizzle
+inundation
+flash flood
+gale
+landslide
+avalanche
+gust
+hurricane
+cyclone
+tornado
+tornadoes
+lightning
+overcast
+slush
+typhoon
+tsunami
