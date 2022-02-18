@@ -44,7 +44,7 @@ To pass this file as input, you need to select input_type=text_file when running
 
 1.First clone the googletest repo from git clone https://github.com/google/googletest/
 
-Next copy the googletest folder under lib folder.
+Next create a lib folder under root directory and copy the googletest folder in lib folder.
 
 2.In root directory of the repo, create a build directory using command "mkdir build".
 
