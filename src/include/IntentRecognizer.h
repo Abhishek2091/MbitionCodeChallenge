@@ -1,4 +1,12 @@
-// To Do : Write header to describe this file
+/**
+ * @file IntentRecognizer.h
+ *
+ * @brief Reads user input and prints user intent
+ *
+ * @author Abhishek Kekre
+ *
+ * @version  1.0
+ */
 
 #ifndef INTENTRECOGNIZER_H
 #define INTENTRECOGNIZER_H

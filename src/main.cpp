@@ -1,4 +1,12 @@
-// To Do : Write header to descibe this
+/**
+ * @file main.cpp
+ *
+ * @brief This program reads user input and prints his intent
+ *
+ * @author Abhishek Kekre
+ *
+ * @version  1.0
+ */
 
 #include "IntentRecognizer.h"
 

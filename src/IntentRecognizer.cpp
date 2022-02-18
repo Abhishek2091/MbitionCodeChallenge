@@ -1,4 +1,12 @@
-//ToDo : Write header for this
+/**
+ * @file IntentRecognizer.cpp
+ *
+ * @brief Reads user input and prints user intent
+ *
+ * @author Abhishek Kekre
+ *
+ * @version  1.0
+ */
 
 #include "IntentRecognizer.h"
 
@@ -15,6 +23,12 @@ IntentRecognizer::IntentRecognizer()
 	fillKeywordColl(IntentType::FACTS);
 }
 
+/**
+ *
+ * Reads input from command line
+ *
+ * @param  string& : Input string
+ */
 void IntentRecognizer::processInput(string& input)
 {
 	convertToLowerCase(input);
@@ -59,6 +73,12 @@ void IntentRecognizer::processInput(string& input)
 	}
 }
 
+/**
+ *
+ * Reads input fetched from text file
+ *
+ * @param  vector<string>& : Collection of input strings
+ */
 void IntentRecognizer::processInput(vector<string>& input)
 {
 	for(auto& input_str : input)
@@ -107,6 +127,11 @@ void IntentRecognizer::processInput(vector<string>& input)
 	
 }
 
+/**
+ *
+ * Prints the output to command line
+ *
+ */
 void IntentRecognizer::printOutput()
 {
 	cout << "\n------------------------------------------------------------------------------------------------------------------------------------------------\n";
@@ -119,6 +144,12 @@ void IntentRecognizer::printOutput()
 	}
 }
 
+/**
+ *
+ * Helper method that initializes class memebers
+ *
+ * @param  IntentType& : Type of intent
+ */
 void IntentRecognizer::fillKeywordColl(const IntentType& intType)
 {
 	string fileName;
@@ -157,6 +188,12 @@ void IntentRecognizer::fillKeywordColl(const IntentType& intType)
 	}
 }
 
+/**
+ *
+ * Helper method for unit tests
+ *
+ * @param  input& : Input string
+ */
 string IntentRecognizer::returnIntent(const string& input)
 {
 	auto in_out_pair = input_output_map.find(input);
