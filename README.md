@@ -61,7 +61,7 @@ If you want to enter input through text file which will have strings for which y
 <br>
 **./IntentRecognizer.exe -input_mode=text_file**
 
-Next you to enter path to text file which will have input strings.
+Next you need to enter path to text file which will have input strings.
 Enter path in format : E.g C:/Input.txt
 
-3.To run the test, run the exe "**IntentRecognizer_tst.exe**".
+3.To run the tests, run the exe "**IntentRecognizer_tst.exe**".
