@@ -41,12 +41,15 @@ To pass this file as input, you need to select input_type=text_file when running
 <br>
 <br>
 **How to build the code ?**
+1.First clone the googletest repo from git clone https://github.com/google/googletest/
 
-1.In root directory of the repo, create a build directory using command "mkdir build".
+Next copy the googletest folder under lib folder.
 
-2.Go to build directory using command "cd build"
+2.In root directory of the repo, create a build directory using command "mkdir build".
 
-3.Run the cmake command **cmake -G "MinGW Makefiles" ..**
+3.Go to build directory using command "cd build"
+
+4.Run the cmake command **cmake -G "MinGW Makefiles" ..**
 
 4.Run make by command "make all".
 <br>
