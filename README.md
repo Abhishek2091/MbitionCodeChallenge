@@ -32,6 +32,11 @@ This project has 3 main directories :
 <br>
 <br>
 **3.tst** : This folder contains the unit tests
+
+
+Main repo has file **input.txt** which can be passed to this program if you want to get intent for multiple strings at once.
+
+To pass this file as input, you need to select input_type=text_file when running the exe.
 <br>
 <br>
 <br>
@@ -62,6 +67,6 @@ If you want to enter input through text file which will have strings for which y
 **./IntentRecognizer.exe -input_mode=text_file**
 
 Next you need to enter path to text file which will have input strings.
-Enter path in format : E.g C:/Input.txt
+Enter path in format : E.g **C:/input.txt**
 
 3.To run the tests, run the exe "**IntentRecognizer_tst.exe**".
