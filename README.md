@@ -41,7 +41,7 @@ This project has 3 main directories :
 
 2.Go to build directory using command "cd build"
 
-3.Run the cmake command " cmake -G "MinGW Makefiles" .."
+3.Run the cmake command **cmake -G "MinGW Makefiles" ..**
 
 4.Run make by command "make all".
 <br>
